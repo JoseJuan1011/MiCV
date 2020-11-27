@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+  <columnConstraints>
+    <ColumnConstraints halignment="RIGHT" hgrow="ALWAYS" maxWidth="294.0943455436385" minWidth="-Infinity" prefWidth="145.81127371266902" />
+    <ColumnConstraints hgrow="ALWAYS" maxWidth="464.6037973232145" minWidth="-Infinity" prefWidth="454.64157808493326" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints maxHeight="40.26416414341671" minHeight="-Infinity" prefHeight="23.301869707796776" vgrow="ALWAYS" />
+      <RowConstraints maxHeight="80.35851087736557" minHeight="-Infinity" prefHeight="28.075470209715867" vgrow="ALWAYS" />
+      <RowConstraints maxHeight="140.37736407477232" minHeight="-Infinity" prefHeight="28.98113186905166" vgrow="ALWAYS" />
+      <RowConstraints maxHeight="146.1887018021081" minHeight="-Infinity" prefHeight="37.132090312214984" vgrow="ALWAYS" />
+      <RowConstraints maxHeight="165.83019211233722" minHeight="-Infinity" prefHeight="72.45281929187234" valignment="TOP" vgrow="ALWAYS" />
+      <RowConstraints maxHeight="133.226398640487" minHeight="-Infinity" prefHeight="28.075484963318985" vgrow="ALWAYS" />
+    <RowConstraints maxHeight="128.60379522642083" minHeight="-Infinity" prefHeight="34.41507356724483" valignment="CENTER" vgrow="ALWAYS" />
+    <RowConstraints maxHeight="132.226398640487" minHeight="-Infinity" prefHeight="22.641518701137272" vgrow="ALWAYS" />
+    <RowConstraints maxHeight="137.6603738602136" minHeight="-Infinity" prefHeight="137.6603738602136" valignment="TOP" vgrow="ALWAYS" />
+  </rowConstraints>
+   <children>
+      <Label text="DNI/NIE/Pasaporte" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <padding>
+            <Insets right="5.0" />
+         </padding>
+         <GridPane.margin>
+            <Insets top="5.0" />
+         </GridPane.margin>
+      </Label>
+      <TextField fx:id="DNI_TextField" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="26.0" prefWidth="367.0" GridPane.columnIndex="1">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="3.0" top="10.0" />
+         </GridPane.margin>
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+      </TextField>
+      <Label text="Nombre" GridPane.rowIndex="1">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <padding>
+            <Insets right="5.0" top="7.0" />
+         </padding>
+      </Label>
+      <TextField fx:id="Nombre_TextField" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="26.0" prefWidth="367.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+         <GridPane.margin>
+            <Insets left="5.0" right="3.0" top="10.0" />
+         </GridPane.margin>
+      </TextField>
+      <Label text="Apellidos" GridPane.rowIndex="2">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <padding>
+            <Insets top="7.0" />
+         </padding>
+      </Label>
+      <TextField fx:id="Apellidos_TextField" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="26.0" prefWidth="367.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+         <GridPane.margin>
+            <Insets left="5.0" right="3.0" top="10.0" />
+         </GridPane.margin>
+      </TextField>
+      <Label text="Fecha de Nacimiento" GridPane.rowIndex="3">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="Fecha_DatePicker" maxHeight="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <GridPane.margin>
+            <Insets left="5.0" top="5.0" />
+         </GridPane.margin>
+      </DatePicker>
+      <Label alignment="TOP_LEFT" text="Dirección" GridPane.rowIndex="4">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="Dirección_TextArea" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" />
+         </GridPane.margin>
+      </TextArea>
+      <Label text="Código Postal" GridPane.rowIndex="5">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <HBox prefHeight="24.0" prefWidth="456.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.vgrow="ALWAYS">
+         <children>
+            <TextField fx:id="CódigoPostal_TextField" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="96.0">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" top="5.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <Label text="Localidad" GridPane.rowIndex="6">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="Localidad_TextField" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="6">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+         </GridPane.margin>
+      </TextField>
+      <Label text="País" GridPane.rowIndex="7">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <GridPane.margin>
+            <Insets top="10.0" />
+         </GridPane.margin>
+      </Label>
+      <ComboBox fx:id="País_ComboBox" maxHeight="1.7976931348623157E308" promptText="Seleccione un País" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.vgrow="ALWAYS">
+         <GridPane.margin>
+            <Insets left="5.0" top="10.0" />
+         </GridPane.margin>
+      </ComboBox>
+      <Label text="Nacionalidad" GridPane.rowIndex="8">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </Label>
+      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="120.0" prefWidth="456.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+         <children>
+            <ListView fx:id="Nacionalidad_ListView" prefHeight="110.0" prefWidth="408.0">
+               <HBox.margin>
+                  <Insets left="5.0" top="10.0" />
+               </HBox.margin>
+            </ListView>
+            <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="100.0" prefWidth="47.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="29.0" text="+" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="19.0" layoutY="10.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="29.0" text="-" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</GridPane>

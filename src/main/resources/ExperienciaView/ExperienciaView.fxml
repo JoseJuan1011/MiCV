@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<HBox fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView fx:id="TableView_Experiencia" prefHeight="400.0" prefWidth="567.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Desde" />
+          <TableColumn prefWidth="75.0" text="Hasta" />
+            <TableColumn prefWidth="103.24530029296875" text="Dominación" />
+            <TableColumn prefWidth="81.509521484375" text="Empleador" />
+        </columns>
+      </TableView>
+      <VBox prefHeight="200.0" prefWidth="102.0">
+         <children>
+            <Button fx:id="Añadir_Button_TableView_Experiencia" mnemonicParsing="false" prefHeight="26.0" prefWidth="57.0" text="Añadir">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="Eliminar_Button_TableView_Experiencia" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Eliminar">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</HBox>
