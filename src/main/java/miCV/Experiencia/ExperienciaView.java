@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -23,7 +24,7 @@ public class ExperienciaView implements Initializable {
     private HBox root;
 
     @FXML
-    private TableView<?> TableView_Experiencia;
+    private TableView<Experiencia> TableView_Experiencia;
 
     @FXML
     private Button Añadir_Button_TableView_Experiencia;
@@ -40,7 +41,7 @@ public class ExperienciaView implements Initializable {
 		return root;
 	}
 
-	public TableView<?> getTableView_Experiencia() {
+	public TableView<Experiencia> getTableView_Experiencia() {
 		return TableView_Experiencia;
 	}
 

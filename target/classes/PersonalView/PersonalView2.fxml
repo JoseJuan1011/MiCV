@@ -178,12 +178,12 @@
             </ListView>
             <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="100.0" prefWidth="47.0" HBox.hgrow="ALWAYS">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="29.0" text="+" VBox.vgrow="ALWAYS">
+                  <Button mnemonicParsing="false" onAction="#onAddNacionalidadAction" prefHeight="26.0" prefWidth="29.0" text="+" VBox.vgrow="ALWAYS">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Button>
-                  <Button layoutX="19.0" layoutY="10.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="29.0" text="-" VBox.vgrow="ALWAYS">
+                  <Button layoutX="19.0" layoutY="10.0" mnemonicParsing="false" onAction="#OnEliminarNacionalidad" prefHeight="26.0" prefWidth="29.0" text="-" VBox.vgrow="ALWAYS">
                      <font>
                         <Font size="14.0" />
                      </font>

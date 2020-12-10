@@ -4,12 +4,16 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.SplitPane;
 import javafx.scene.control.TableView;
+import miCV.Contacto.subClasses.Email;
+import miCV.Contacto.subClasses.Teléfono;
+import miCV.Contacto.subClasses.Web;
 
 public class ContactoView implements Initializable {
 
@@ -23,7 +27,7 @@ public class ContactoView implements Initializable {
     private SplitPane root;
 
 	@FXML
-    private TableView<String> TableView_Telefonos;
+    private TableView<Teléfono> TableView_Telefonos;
 
     @FXML
     private Button Añadir_Button_TableView_Teléfonos;
@@ -32,7 +36,7 @@ public class ContactoView implements Initializable {
     private Button Eliminar_Button_TableView_Teléfonos;
 
     @FXML
-    private TableView<String> TableView_DireccionesCorreo;
+    private TableView<Email> TableView_DireccionesCorreo;
 
     @FXML
     private Button Añadir_Button_TableView_DireccionesCorreo;
@@ -41,7 +45,7 @@ public class ContactoView implements Initializable {
     private Button Eliminar_Button_TableView_DireccionesCorreo;
 
     @FXML
-    private TableView<String> TableView_Webs;
+    private TableView<Web> TableView_Webs;
 
     @FXML
     private Button Button_Añadir_TableView_Webs;
@@ -58,7 +62,7 @@ public class ContactoView implements Initializable {
 		return root;
 	}
 
-	public TableView<String> getTableView_Telefonos() {
+	public TableView<Teléfono> getTableView_Telefonos() {
 		return TableView_Telefonos;
 	}
 
@@ -70,7 +74,7 @@ public class ContactoView implements Initializable {
 		return Eliminar_Button_TableView_Teléfonos;
 	}
 
-	public TableView<String> getTableView_DireccionesCorreo() {
+	public TableView<Email> getTableView_DireccionesCorreo() {
 		return TableView_DireccionesCorreo;
 	}
 
@@ -82,7 +86,7 @@ public class ContactoView implements Initializable {
 		return Eliminar_Button_TableView_DireccionesCorreo;
 	}
 
-	public TableView<String> getTableView_Webs() {
+	public TableView<Web> getTableView_Webs() {
 		return TableView_Webs;
 	}
 

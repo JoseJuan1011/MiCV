@@ -2,17 +2,22 @@ package miCV.mainView;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.SeparatorMenuItem;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.ButtonType;
 import javafx.scene.layout.BorderPane;
 import miCV.Personal.PersonalView;
 import miCV.Conocimientos.ConocimientosView;
@@ -114,25 +119,72 @@ public class MainView implements Initializable {
 			e.printStackTrace();
 		}
 	}
+	
+	@FXML
+    void OnAbrirArchhivoAction(ActionEvent event) {
+		
+    }
+
+    @FXML
+    void OnGuardarAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void OnGuardarComoAction(ActionEvent event) {
+
+    }
+	
+	@FXML
+    void OnSalirAction(ActionEvent event) {
+		Alert alert = new Alert(AlertType.CONFIRMATION);
+		alert.setTitle("Confirmación de Salida del Programa");
+		alert.setContentText("¿Está seguro que quiere salir del programa? Los cambios no guardados se eliminaran");
+		
+		Optional<ButtonType> result = alert.showAndWait();
+		
+		if (result.get().equals(ButtonType.OK)) {
+			System.exit(0);
+		}
+    }
+
+	public MenuItem getMenuItem_Nuevo() {
+		return MenuItem_Nuevo;
+	}
+
+	public MenuItem getMenuItem_Abrir() {
+		return MenuItem_Abrir;
+	}
+
+	public MenuItem getMenuItem_Guardar() {
+		return MenuItem_Guardar;
+	}
+
+	public MenuItem getMenuItem_GuardarComo() {
+		return MenuItem_GuardarComo;
+	}
+
+	public Tab getTab_Personal() {
+		return Tab_Personal;
+	}
+
+	public Tab getTab_Contacto() {
+		return Tab_Contacto;
+	}
+
+	public Tab getTab_Formación() {
+		return Tab_Formación;
+	}
+
+	public Tab getTab_Experiencia() {
+		return Tab_Experiencia;
+	}
+
+	public Tab getTab_Conocimientos() {
+		return Tab_Conocimientos;
+	}
 
 	public BorderPane getRoot() {
 		return root;
 	}
-	
-	public PersonalView getPersonalView() {
-		return PersonalView;
-	}
-	
-	public ContactoView getContactoView() {
-		return ContactoView;
-	}
-
-	public ExperienciaView getExperienciaView() {
-		return ExperienciaView;
-	}
-
-	public ConocimientosView getConocimientosView() {
-		return ConocimientosView;
-	}
-	
 }

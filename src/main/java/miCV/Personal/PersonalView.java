@@ -4,11 +4,14 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.ChoiceDialog;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.Dialog;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -47,17 +50,26 @@ public class PersonalView implements Initializable {
     private TextField Localidad_TextField;
 
     @FXML
-    private ComboBox<?> País_ComboBox;
+    private ComboBox<String> País_ComboBox;
 
     @FXML
-    private ListView<?> Nacionalidad_ListView;
-
+    private ListView<Nacionalidad> Nacionalidad_ListView;
+    
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		// TODO Auto-generated method stub
-		
+		País_ComboBox.getItems().addAll("España","Inglaterra","Portugal");
 	}
-
+	
+	@FXML
+    void onAddNacionalidadAction(ActionEvent event) {
+		PersonalController.addNacionalidad();
+    }
+	
+	@FXML
+    void OnEliminarNacionalidad(ActionEvent event) {
+		PersonalController.deleteNacionalidad();
+    }
+	
 	public GridPane getRoot() {
 		return root;
 	}
@@ -90,13 +102,12 @@ public class PersonalView implements Initializable {
 		return Localidad_TextField;
 	}
 
-	public ComboBox<?> getPaís_ComboBox() {
+	public ComboBox<String> getPaís_ComboBox() {
 		return País_ComboBox;
 	}
 
-	public ListView<?> getNacionalidad_ListView() {
+	public ListView<Nacionalidad> getNacionalidad_ListView() {
 		return Nacionalidad_ListView;
 	}
-	
 	
 }

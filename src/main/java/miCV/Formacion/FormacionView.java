@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -23,15 +24,14 @@ public class FormacionView implements Initializable {
     private HBox root;
 
     @FXML
-    private TableView<?> TableView_Formacion;
+    private TableView<Titulo> TableView_Formacion;
 
     @FXML
     private Button Añadir_Button_TableView_Formacion;
 
     @FXML
     private Button Eliminar_Button_TableView_Formacion;
-
-
+    
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		
@@ -42,7 +42,7 @@ public class FormacionView implements Initializable {
 	}
 
 
-	public TableView<?> getTableView_Formacion() {
+	public TableView<Titulo> getTableView_Formacion() {
 		return TableView_Formacion;
 	}
 

@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -23,7 +24,7 @@ public class ConocimientosView implements Initializable {
     private HBox root;
 
     @FXML
-    private TableView<?> TableView_Conocimientos;
+    private TableView<Conocimiento> TableView_Conocimientos;
 
     @FXML
     private Button AñadirConocimiento_Button_TableView_Conocimientos;
@@ -44,7 +45,7 @@ public class ConocimientosView implements Initializable {
 		return root;
 	}
 
-	public TableView<?> getTableView_Conocimientos() {
+	public TableView<Conocimiento> getTableView_Conocimientos() {
 		return TableView_Conocimientos;
 	}
 

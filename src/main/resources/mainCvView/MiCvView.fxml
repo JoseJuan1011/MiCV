@@ -56,7 +56,7 @@
                      </accelerator>
                   </MenuItem>
                   <SeparatorMenuItem fx:id="MenuItem_Separator" mnemonicParsing="false" />
-                  <MenuItem fx:id="MenuItem_Salir" mnemonicParsing="false" text="Salir">
+                  <MenuItem fx:id="MenuItem_Salir" mnemonicParsing="false" onAction="#OnSalirAction" text="Salir">
                      <accelerator>
                         <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
                      </accelerator>
